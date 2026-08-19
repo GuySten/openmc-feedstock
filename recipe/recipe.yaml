@@ -82,7 +82,7 @@ requirements:
     - hdf5
     - hdf5 * [build=${{ mpi_prefix }}_*]
     - libpng
-    - python
+    - python >= 3.12
     - h5py * [build=${{ mpi_prefix }}_*]
     - scipy
     - pandas
