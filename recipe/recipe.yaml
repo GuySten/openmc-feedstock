@@ -61,6 +61,8 @@ requirements:
   host:
     - if: dagmc == "dagmc"
       then: dagmc >=3.2.3 [build=${{ mpi_prefix }}_*]
+    - if: dagmc == "dagmc"
+      then: eigen <5       
     # Repeat of requirements with no constraint and with build variant are to
     # pick up global pinning (from no constraint)
     - hdf5
@@ -98,9 +100,7 @@ requirements:
     - njoy2016
     - ncrystal
     - mcpl
-  run_constraints:
-    - if: dagmc == "dagmc"
-      then: eigen <5 # eigen 5 conflicts with dagmc
+
 
 tests:
   - package_contents:
