@@ -39,7 +39,7 @@ build:
     down_prioritize_variant: ${{ 0 if dagmc == "dagmc" else 1 }}
   skip:
     - win
-    - match(python, "<3.11")
+    - match(python, "<3.12")
   prefix_detection:
     ignore_binary_files: true
 
@@ -82,7 +82,7 @@ requirements:
     - hdf5
     - hdf5 * [build=${{ mpi_prefix }}_*]
     - libpng
-    - python >= 3.12
+    - python
     - h5py * [build=${{ mpi_prefix }}_*]
     - scipy
     - pandas
