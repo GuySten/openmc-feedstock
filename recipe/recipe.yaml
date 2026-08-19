@@ -98,7 +98,7 @@ requirements:
     - njoy2016
     - ncrystal
     - mcpl
-  run_constrained:
+  run_constraints:
     - if: dagmc == "dagmc"
       then: eigen <5 # eigen 5 conflicts with dagmc
 
